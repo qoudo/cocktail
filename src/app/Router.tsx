@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Navigate,
   Route,
@@ -16,11 +15,14 @@ export const Router = () => {
   const [firstCocktail] = COCKTAIL_CODES;
 
   return (
-    <RouterProvider>
+    <RouterProvider basename="/cocktail">
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Navigate to={`/${firstCocktail}`} />} />
-          <Route path="/:code" element={<CocktailPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route
+            index
+            element={<Navigate to={`/${firstCocktail}`} replace />}
+          />
+          <Route path=":code" element={<CocktailPage />} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Route>
       </Routes>

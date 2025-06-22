@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { COCKTAIL_CODES } from '../../constants/cocktails';
 import './Layout.scss';
