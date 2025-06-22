@@ -2,7 +2,7 @@
 
 Это веб-приложение для просмотра информации о коктейлях.
 
-Проект доступен по ссылке https://github.com/qoudo/cocktail
+Проект доступен на Github Page по ссылке: https://qoudo.github.io/cocktail/
 
 ## Стек технологий
 
