@@ -1,10 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cocktailReducer from './cocktailSlice';
 
-/**
- * Redux-хранилище (store) приложения.
- * Сконфигурировано с помощью `configureStore` из Redux Toolkit.
- */
 export const store = configureStore({
   reducer: {
     cocktails: cocktailReducer,

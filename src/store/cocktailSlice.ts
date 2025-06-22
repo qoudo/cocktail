@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import type { Cocktail } from '../types/cocktail';
 
-// Сюда мы добавим тип для коктейля, когда он будет определен
 interface CocktailState {
   cocktails: Record<string, Cocktail[]>;
   loading: boolean;
@@ -16,7 +15,7 @@ const initialState: CocktailState = {
 };
 
 /**
- * Асинхронный thunk для загрузки коктейлей по коду.
+ * Запрос данных коктелей.
  * Перед отправкой запроса проверяет, есть ли данные в состоянии,
  * чтобы избежать дублирующих вызовов.
  */
@@ -26,7 +25,6 @@ export const fetchCocktailsByCode = createAsyncThunk(
     const { cocktails } = (getState() as { cocktails: CocktailState })
       .cocktails;
     if (cocktails[code]) {
-      // Данные уже есть, не делаем запрос
       return { code, data: cocktails[code] };
     }
     const response = await axios.get<{ drinks: Cocktail[] }>(

@@ -11,8 +11,6 @@ interface LazyImageProps {
 
 /**
  * Компонент для отложенной ("ленивой") загрузки изображений.
- * Использует Intersection Observer API для загрузки изображения только тогда,
- * когда оно попадает в область видимости.
  * @param {LazyImageProps} props - Пропсы компонента.
  */
 export const LazyImage = ({ src, alt, className }: LazyImageProps) => {

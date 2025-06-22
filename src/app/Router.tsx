@@ -11,8 +11,6 @@ import { Layout } from '../components/Layout/Layout';
 
 /**
  * Компонент-роутер.
- * Определяет все маршруты приложения, используя `react-router-dom`.
- * Включает в себя основной макет `Layout`.
  */
 export const Router = () => {
   const [firstCocktail] = COCKTAIL_CODES;
